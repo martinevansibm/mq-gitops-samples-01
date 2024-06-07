@@ -2,27 +2,41 @@ package com.ibm.integration.qmdemo;
 
 import javax.jms.Message;
 import javax.jms.MessageConsumer;
+
+import java.net.MalformedURLException;
+
 import javax.jms.Connection;
 import javax.jms.Destination;
 import javax.jms.Session;
 import com.ibm.mq.jms.MQConnectionFactory;
 import com.ibm.msg.client.wmq.WMQConstants;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class Consumer {
 
         public static void main(String[] args) {
 
+
+                URL chanTab = null;
+
+		try {
+			chanTab = new URL("http://ccdt-service.mq-demo.svc.cluster.local:8080/ccdt.json");
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+       
                 try {
 
                         MQConnectionFactory cf = new MQConnectionFactory();
 
-                        cf.setHostName("qmdemo-ibm-mq");
-                        cf.setPort(1414);
-                        cf.setQueueManager("QMDEMO");
-                        cf.setChannel("DEV.APP.SVRCONN.0TLS");
+                        cf.setCCDTURL(chanTab);
+                        cf.setQueueManager("*ANY_QM");
                         cf.setTransportType(WMQConstants.WMQ_CM_CLIENT);
                         cf.setAppName("MY-CONSUMER");
                         cf.setClientReconnectOptions(WMQConstants.WMQ_CLIENT_RECONNECT);
+                        cf.setClientReconnectTimeout(320);
+        
 
                         Connection con = null;
 
