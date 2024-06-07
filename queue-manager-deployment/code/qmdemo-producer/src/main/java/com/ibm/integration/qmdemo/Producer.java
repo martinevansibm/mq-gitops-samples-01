@@ -55,9 +55,9 @@ public class Producer {
 
 			System.out.println("Sending...");
 
-				for (int i = 0; i < 1000; i++) {
+				for (int i = 0; i < 100000; i++) {
 					producer.send(msg);
-					Thread.sleep(3000);
+					Thread.sleep(1000);
 				}
 
 			con.close();
