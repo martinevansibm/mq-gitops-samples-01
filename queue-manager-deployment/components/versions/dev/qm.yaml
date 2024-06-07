@@ -8,5 +8,7 @@ spec:
     license: L-AXAF-JLZ53A
     use: Development
   version: 9.3.5.1-r1
+  queueManager:
+    image: image-registry.openshift-image-registry.svc:5000/mq-demo/mq-prometheus:1.0.3
 
   
