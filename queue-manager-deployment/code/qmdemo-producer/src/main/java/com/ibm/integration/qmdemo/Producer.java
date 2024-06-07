@@ -21,6 +21,8 @@ public class Producer {
 
 	public static void main(String[] args) {
 
+		URL chanTab = null;
+
 		try {
 			chanTab = new URL("http://ccdt-service.mq-demo.svc.cluster.local:8080/ccdt.json");
 		} catch (MalformedURLException e) {
@@ -34,7 +36,7 @@ public class Producer {
 			cf.setCCDTURL(chanTab);
 			cf.setQueueManager("*ANY_QM");
 			cf.setTransportType(WMQConstants.WMQ_CM_CLIENT);
-			cf.setAppName("MY-CONSUMER");
+			cf.setAppName("MY-PRODUCER");
 			cf.setClientReconnectOptions(WMQConstants.WMQ_CLIENT_RECONNECT);
 			cf.setClientReconnectTimeout(320);
 
