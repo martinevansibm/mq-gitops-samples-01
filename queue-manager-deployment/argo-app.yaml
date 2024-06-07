@@ -10,6 +10,6 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: queue-manager-deployment/queue-managers
-    repoURL: 'https://github.com/ibm-messaging/mq-gitops-samples'
+    repoURL: 'https://github.com/martinevansibm/mq-gitops-samples-01'
     targetRevision: main
   project: default
