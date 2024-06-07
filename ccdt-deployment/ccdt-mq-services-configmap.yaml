@@ -9,7 +9,7 @@ data:
     {
         "channel": [
                 {
-                        "name": "IBM.APP.SVRCONN",
+                        "name": "DEV.APP.SVRCONN.0TLS",
                         "clientConnection": {
                                 "connection": [
                                         {
@@ -19,9 +19,6 @@ data:
                                 ],
                                 "queueManager": "ANY_QM"
                         },
-                        "transmissionSecurity": {
-                                "cipherSpecification": "ANY_TLS12_OR_HIGHER"
-                        },
                         "connectionManagement": {
                                 "clientWeight": 1,
                                 "affinity": "none"
@@ -29,7 +26,7 @@ data:
                         "type": "clientConnection"
                 },
                 {
-                        "name": "IBM.APP.SVRCONN",
+                        "name": "DEV.APP.SVRCONN.0TLS",
                         "clientConnection": {
                                 "connection": [
                                         {
@@ -39,9 +36,6 @@ data:
                                 ],
                                 "queueManager": "ANY_QM"
                         },
-                        "transmissionSecurity": {
-                                "cipherSpecification": "ANY_TLS12_OR_HIGHER"
-                        },
                         "connectionManagement": {
                                 "clientWeight": 1,
                                 "affinity": "none"
@@ -49,7 +43,7 @@ data:
                         "type": "clientConnection"
                 },
                 {
-                        "name": "IBM.APP.SVRCONN",
+                        "name": "DEV.APP.SVRCONN.0TLS",
                         "clientConnection": {
                                 "connection": [
                                         {
@@ -59,13 +53,10 @@ data:
                                 ],
                                 "queueManager": "DQM01"
                         },
-                        "transmissionSecurity": {
-                                "cipherSpecification": "ANY_TLS12_OR_HIGHER"
-                        },
                         "type": "clientConnection"
                 },
             {
-                        "name": "IBM.APP.SVRCONN",
+                        "name": "DEV.APP.SVRCONN.0TLS",
                         "clientConnection": {
                                 "connection": [
                                         {
@@ -75,13 +66,10 @@ data:
                                 ],
                                 "queueManager": "DQM02"
                         },
-                        "transmissionSecurity": {
-                                "cipherSpecification": "ANY_TLS12_OR_HIGHER"
-                        },
                         "type": "clientConnection"
                 },
             {
-                        "name": "IBM.APP.SVRCONN",
+                        "name": "DEV.APP.SVRCONN.0TLS",
                         "clientConnection": {
                                 "connection": [
                                         {
@@ -91,13 +79,10 @@ data:
                                 ],
                                 "queueManager": "DQM03"
                         },
-                        "transmissionSecurity": {
-                                "cipherSpecification": "ANY_TLS12_OR_HIGHER"
-                        },
                         "type": "clientConnection"
                 },
                 {
-                        "name": "IBM.APP.SVRCONN",
+                        "name": "DEV.APP.SVRCONN.0TLS",
                         "clientConnection": {
                                 "connection": [
                                         {
@@ -107,11 +92,7 @@ data:
                                 ],
                                 "queueManager": "DQM04"
                         },
-                        "transmissionSecurity": {
-                                "cipherSpecification": "ANY_TLS12_OR_HIGHER"
-                        },
                         "type": "clientConnection"
                 }
         ]
     }
-
